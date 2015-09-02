@@ -238,6 +238,9 @@ function! s:Opener._openFile()
     if self._reuse && self._reuseWindow()
         return
     endif
+    if self._reuseWindow()
+        return
+    endif
 
     call self._gotoTargetWin()
 
